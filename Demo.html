@@ -5,13 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" name="demo" id="demo">
+<label for="demo"></label><input type="text" name="demo" id="demo">
 <button onclick="demo()">Click</button>
-<hr width="10%">
 </body>
 </html>
 <script>
-    let i = 0
+    let i;
     let num = 0
     let primeNumbers = "";
     let n = 3;
@@ -20,17 +19,17 @@
     for (i = 1; ; i++) {
         let counter = 0;
         for (num = i; num >= 1; num--) {
-            if (i % num == 0) {
+            if (i % num === 0) {
                 counter = counter + 1;
             }
         }
-        if (counter == 2) {
+        if (counter === 2) {
             primeNumbers += i + "<br>"
             countNumber++
         }
-        if (countNumber == n) {
+        if (countNumber === n) {
             break
-        }()
+        }
     }
     document.write(primeNumbers)
 </script>
