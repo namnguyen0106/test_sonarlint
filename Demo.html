@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="demo" id="demo">
+<button onclick="demo()">Click</button>
+<hr width="10%">
+</body>
+</html>
+<script>
+    let i = 0
+    let num = 0
+    let primeNumbers = "";
+    let n = 3;
+    let countNumber = 0;
+
+    for (i = 1; ; i++) {
+        let counter = 0;
+        for (num = i; num >= 1; num--) {
+            if (i % num == 0) {
+                counter = counter + 1;
+            }
+        }
+        if (counter == 2) {
+            primeNumbers += i + "<br>"
+            countNumber++
+        }
+        if (countNumber == n) {
+            break
+        }
+    }
+    document.write(primeNumbers)
+</script>
